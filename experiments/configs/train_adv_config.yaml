@@ -1,46 +1,64 @@
+# Adversarial Training Configuration
 experiment:
-  name: "sar_colorization_gan_v1"
-  description: >
-    Advanced adversarial SAR colorization experiment using MultiBranchGenerator (wavelet+attention)
-    trained on SEN1-2 + MSTAR merged dataset.
+  name: "sar_colorization_adversarial"
   seed: 42
-  checkpoint_dir: "experiments/checkpoints_adv"
+  log_dir: "experiments/logs/adversarial"
+  checkpoint_dir: "experiments/checkpoints/adversarial"
+  output_dir: "experiments/outputs/adversarial"
 
-dataset:
-  root: "data/processed"
-  train_sar_dir: "train/SAR"
-  train_opt_dir: "train/Optical"
-  val_sar_dir: "val/SAR"
-  val_opt_dir: "val/Optical"
+data:
+  root_dir: "Data/Processed/pipeline_output"
+  image_size: 256
   num_workers: 4
+  filter_method: "lee"
 
 model:
   generator:
+    type: "multibranch"
     in_channels: 1
     out_channels: 3
+    base_channels: 64
+    num_branches: 3
+    use_attention: true
+    use_wavelet: true
+  
   discriminator:
+    type: "multiscale"
     in_channels: 4
+    base_channels: 64
+    num_scales: 3
+    use_sn: true
 
 training:
-  epochs: 120
-  batch_size: 8
-  lr_g: 2.0e-4
-  lr_d: 2.0e-4
-  betas: [0.5, 0.999]
-  lambda_gan: 1.0
+  epochs: 200
+  batch_size: 4
+  generator_optimizer:
+    type: "adam"
+    learning_rate: 0.0002
+    betas: [0.5, 0.999]
+    weight_decay: 0.0001
+  
+  discriminator_optimizer:
+    type: "adam"
+    learning_rate: 0.0002
+    betas: [0.5, 0.999]
+    weight_decay: 0.0001
+  
+  scheduler: "cosine"
+  grad_clip: 1.0
+  save_frequency: 20
+  patience: 50
+
+loss:
+  gan_mode: "lsgan"
   lambda_l1: 100.0
-  lambda_ssim: 1.0
-  lambda_perc: 0.1
-
-scheduler:
-  type: "StepLR"
-  step_size: 40
-  gamma: 0.5
-
-logging:
-  interval: 20
-  save_best_metric: "val_psnr"
-  log_to_tensorboard: true
+  lambda_ssim: 10.0
+  lambda_perceptual: 1.0
+  lambda_gan: 1.0
+  lambda_edge: 10.0
+  lambda_tv: 0.1
+  lambda_gp: 10.0
 
 evaluation:
-  metrics: ["psnr", "ssim"]
+  batch_size: 4
+  num_samples: 10
