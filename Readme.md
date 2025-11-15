@@ -550,10 +550,6 @@ ColorWave---SAR-Image-Colorization/
 │   ├── Input/                   # Input SAR images
 │   └── Paired_Output/           # Colorized outputs
 │
-├── nginx/                        # Nginx configuration
-│   ├── nginx.conf               # Main nginx config
-│   └── conf.d/                  # Server configurations
-│
 ├── docker-compose.yml           # Docker Compose configuration
 ├── DockerFile                   # Docker image definition
 ├── requirements.txt             # Python dependencies
@@ -593,13 +589,6 @@ We welcome contributions to improve ColorWave! Please follow these guidelines:
    git push origin feature/your-feature-name
    ```
 
-### Development Guidelines
-
-- **Code Style**: Use Black formatter and follow PEP 8
-- **Testing**: Add unit tests for new functionality
-- **Documentation**: Update docstrings and README as needed
-- **Performance**: Profile code changes for performance impact
-- **Compatibility**: Ensure compatibility with Python 3.8+
 
 ### Areas for Contribution
 
@@ -619,9 +608,9 @@ If you use ColorWave in your research, please cite:
 ```bibtex
 @software{colorwave_sar_colorization,
   title = {ColorWave: SAR Image Colorization},
-  author = {Sharma, Your Name},
-  year = {2024},
-  url = {https://github.com/sharma-0311/ColorWave---SAR-Image-Colorizer},
+  author = {Sharma, Raghav},
+  year = {2025},
+  url = {https://github.com/sharma-0311/ColorWave-SAR_Image_Colorizer},
   version = {1.0.0}
 }
 ```
@@ -644,10 +633,18 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Contact & Support
 
-- **GitHub Issues**: [Report bugs or request features](https://github.com/sharma-0311/ColorWave---SAR-Image-Colorizer/issues)
-- **Repository**: [https://github.com/sharma-0311/ColorWave---SAR-Image-Colorizer](https://github.com/sharma-0311/ColorWave---SAR-Image-Colorizer)
+- **Repository**: [https://github.com/sharma-0311/ColorWave-SAR Image Colorizer](https://github.com/sharma-0311/ColorWave-SAR_Image_Colorizer)
 
 ---
+
+## Final Note
+
+```
+ColorWave is more than a system — it is a step toward unlocking deeper insight from Earth’s most complex radar signals.
+A commitment to making SAR imagery clearer, richer, and more meaningful.
+
+"Because understanding our planet should never be limited by grayscale."
+ ```
 
 **Built with dedication for advancing SAR image analysis and remote sensing applications**
 
