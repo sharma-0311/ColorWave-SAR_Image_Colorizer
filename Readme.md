@@ -456,14 +456,19 @@ docker-compose up -d
 
 ## Results & Visualizations
 
-### Sample Outputs
+### Model Outputs
 
-**Note: Replace these placeholder paths with actual images from your results directory**
+![Input SAR Image]
 
-![Input SAR Image](Sar_Images/Input/Sar_Image 1.jpg)
+<p align="center">
+  <img src="./Sar_Images/Input/Sar_Image 1.jpg" alt="Image_1" width="600"/>
+</p>
 *Original grayscale SAR image input*
 
-![Colorized Output](Sar_Images/Paired_Output/Sar_Image 1.jpg)
+![Colorized Output]
+<p align="center">
+  <img src="./Sar_Images/Paired_Output/Sar_Image 1.jpg" alt="Image_1" width="600"/>
+</p>
 *ColorWave colorized output with realistic color mapping*
 
 ### Performance Analysis
