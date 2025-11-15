@@ -458,17 +458,41 @@ docker-compose up -d
 
 ### Model Outputs
 
-![Input SAR Image]
+
 
 <p align="center">
-  <img src="./Sar_Images/Input/Sar_Image 1.jpg" alt="Image_1" width="600"/>
+    Input SAR Image
+  <img src="./Sar_Images/Input/Sar_Image 1.jpg" alt="Image_1" width="200"/>
 </p>
 *Original grayscale SAR image input*
 
-![Colorized Output]
 <p align="center">
-  <img src="./Sar_Images/Paired_Output/Sar_Image 1.jpg" alt="Image_1" width="600"/>
+    Colorized Output
+  <img src="./Sar_Images/Paired_Output/Sar_Image 1.jpg" alt="Image_1" width="200"/>
 </p>
+
+<p align="center">
+    Input SAR Image
+  <img src="./Sar_Images/Input/Sar_Image 2.jpg" alt="Image_2" width="200"/>
+</p>
+*Original grayscale SAR image input*
+
+<p align="center">
+    Colorized Output
+  <img src="./Sar_Images/Paired_Output/Sar_Image 2.jpg" alt="Image_2" width="200"/>
+</p>
+
+<p align="center">
+    Input SAR Image
+  <img src="./Sar_Images/Input/Sar_Image 3.jpg" alt="Image_3" width="200"/>
+</p>
+*Original grayscale SAR image input*
+
+<p align="center">
+    Colorized Output
+  <img src="./Sar_Images/Paired_Output/Sar_Image 3.jpg" alt="Image_3" width="200"/>
+</p>
+
 *ColorWave colorized output with realistic color mapping*
 
 ### Performance Analysis
