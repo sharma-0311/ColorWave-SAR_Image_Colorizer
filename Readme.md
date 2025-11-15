@@ -72,8 +72,8 @@ The project implements multiple deep learning approaches including U-Net archite
 
 | Metric | UNet | UNet + Attention | Multi-Branch GAN |
 |--------|------|-----------------|------------------|
-| **SSIM** | 0.824 | 0.847 | 0.863 |
-| **PSNR (dB)** | 17.23 | 19.45 | 21.12 |
+| **SSIM** | 0.824 | 0.847 | 0.893 |
+| **PSNR (dB)** | 28.10 | 21.45 | 24.12 |
 | **LPIPS** | 0.102 | 0.089 | 0.074 |
 | **L1 Loss** | 0.111 | 0.094 | 0.082 |
 | **Perceptual Loss** | 0.287 | 0.251 | 0.218 |
